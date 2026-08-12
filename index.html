@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="락페가는 여자들이 함께 만드는 페스티벌 정보 아카이브" />
+    <meta name="theme-color" content="#fffdf8" />
+    <title>락페가는 여자들 Archive</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="#top" aria-label="락페가는 여자들 홈">
+          <span class="wordmark-mark" aria-hidden="true">ϟ</span>
+          <span>락페가는 여자들</span>
+        </a>
+        <nav class="desktop-nav" aria-label="주요 메뉴">
+          <a href="#items">락페 아이템</a>
+          <a href="#rooms">파생방 정보</a>
+          <a href="#transfers">티켓·숙소 양도</a>
+          <a class="nav-accent" href="#submit">정보 제보</a>
+        </nav>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="모바일 메뉴" hidden>
+        <a href="#items">락페 아이템</a>
+        <a href="#rooms">파생방 정보</a>
+        <a href="#transfers">티켓·숙소 양도</a>
+        <a href="#submit">정보 제보</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="eyebrow"><span>✦</span> ROCK FESTIVAL ARCHIVE</div>
+        <h1>락페가는 여자들<br /><span>Archive</span></h1>
+        <p class="hero-copy">카톡방에서 흘러가는 좋은 정보들,<br class="mobile-only" /> 여기 차곡차곡 모아뒀어요.</p>
+        <div class="hero-meta">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="last-updated">최근 업데이트</span>
+        </div>
+
+        <form class="search-box" id="search-form" role="search">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.8"></circle><path d="m16 16 4 4"></path></svg>
+          <label class="sr-only" for="site-search">아카이브 검색</label>
+          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 방 이름, 행사명을 검색해보세요" />
+          <kbd>⌘ K</kbd>
+        </form>
+
+        <div class="quick-links" aria-label="바로가기">
+          <a href="#items"><span>🛍️</span><b>락페 아이템</b><small>후기와 쇼핑 링크</small></a>
+          <a href="#rooms"><span>💬</span><b>파생방 정보</b><small>오픈카톡 모음</small></a>
+          <a href="#transfers"><span>🎟️</span><b>티켓·숙소 양도</b><small>최신 양도 정보</small></a>
+        </div>
+      </section>
+
+      <div class="document">
+        <section class="archive-section" id="items" aria-labelledby="items-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">FESTIVAL ESSENTIALS</p>
+              <h2 id="items-title"><span class="title-icon">🛍️</span> 락페 아이템</h2>
+              <p>직접 써보고 괜찮았던 아이템과 솔직한 후기를 모았어요.</p>
+            </div>
+            <span class="count" id="items-count"></span>
+          </div>
+          <div class="filter-row" id="item-filters" aria-label="아이템 카테고리 필터"></div>
+          <div class="item-grid" id="item-grid"></div>
+          <button class="more-button" id="items-more" type="button"><span>＋</span> 더 많은 아이템 보기</button>
+        </section>
+
+        <section class="archive-section" id="rooms" aria-labelledby="rooms-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">OPEN CHAT</p>
+              <h2 id="rooms-title"><span class="title-icon">💬</span> 파생방 정보</h2>
+              <p>함께 가고, 묵고, 나누기 위한 오픈카톡 링크 모음이에요.</p>
+            </div>
+            <span class="count" id="rooms-count"></span>
+          </div>
+          <div class="table-wrap desktop-table">
+            <table>
+              <thead><tr><th>방 이름</th><th>설명</th><th>링크</th><th>비고</th></tr></thead>
+              <tbody id="rooms-table"></tbody>
+            </table>
+          </div>
+          <div class="mobile-card-list" id="rooms-cards"></div>
+          <button class="more-button" id="rooms-more" type="button"><span>＋</span> 더 많은 파생방 보기</button>
+        </section>
+
+        <section class="archive-section" id="transfers" aria-labelledby="transfers-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">TICKET & STAY</p>
+              <h2 id="transfers-title"><span class="title-icon">🎟️</span> 티켓 / 숙소 양도</h2>
+              <p>최신순으로 정리했어요. 거래 전 본인 확인은 꼭 해주세요.</p>
+            </div>
+            <span class="count" id="transfers-count"></span>
+          </div>
+          <div class="filter-row" id="transfer-filters" aria-label="양도 종류 필터"></div>
+          <div class="table-wrap desktop-table">
+            <table class="transfer-table">
+              <thead><tr><th>행사명</th><th>종류</th><th>날짜</th><th>수량</th><th>가격</th><th>상태</th><th></th></tr></thead>
+              <tbody id="transfers-table"></tbody>
+            </table>
+          </div>
+          <div class="mobile-card-list transfer-cards" id="transfers-cards"></div>
+          <button class="more-button" id="transfers-more" type="button"><span>＋</span> 완료된 글 포함 더 보기</button>
+        </section>
+
+        <section class="submit-section" id="submit" aria-labelledby="submit-title">
+          <div class="submit-pin" aria-hidden="true">↗</div>
+          <div class="submit-copy">
+            <p class="section-kicker">CONTRIBUTE</p>
+            <h2 id="submit-title">좋은 정보, 혼자만 알기 아깝다면?</h2>
+            <p>추천하고 싶은 아이템, 생생한 사용 후기, 파생방 또는 티켓·숙소 양도 정보를 운영진에게 알려주세요.</p>
+            <ul>
+              <li>링크와 함께 간단한 설명을 보내주세요.</li>
+              <li>연락처 등 민감한 개인정보는 공개하지 않아요.</li>
+            </ul>
+          </div>
+          <a class="primary-button" id="submit-link" href="#">정보 제보하기 <span>↗</span></a>
+        </section>
+      </div>
+
+      <div class="no-results" id="no-results" hidden>
+        <span>⌕</span>
+        <h2>검색 결과가 없어요</h2>
+        <p>다른 검색어로 다시 찾아보세요.</p>
+        <button type="button" id="clear-search">검색 지우기</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <a class="wordmark footer-logo" href="#top"><span class="wordmark-mark">ϟ</span><span>락페가는 여자들 Archive</span></a>
+          <p>비영리 커뮤니티 공유용 아카이브입니다.<br />거래는 반드시 본인 책임 아래 안전하게 진행해주세요.</p>
+        </div>
+        <div class="footer-links"><a href="#items">아이템</a><a href="#rooms">파생방</a><a href="#transfers">양도</a><a href="#submit">제보</a></div>
+        <p class="copyright">© <span id="year"></span> 락페가는 여자들</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="to-top" type="button" aria-label="맨 위로">↑</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

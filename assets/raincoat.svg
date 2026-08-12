@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="t d">
+  <title id="t">핑크 판초 레인코트</title><desc id="d">축제 잔디밭을 배경으로 한 핑크색 후드 판초 우비</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dce6e0"/><stop offset="1" stop-color="#f1eee5"/></linearGradient><linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff6ca5"/><stop offset=".5" stop-color="#ed3f80"/><stop offset="1" stop-color="#ca245f"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="12"/></filter></defs>
+  <rect width="600" height="700" fill="url(#sky)"/><g opacity=".55" filter="url(#blur)"><circle cx="70" cy="210" r="80" fill="#6d956b"/><circle cx="540" cy="190" r="110" fill="#4e7d58"/><circle cx="150" cy="320" r="100" fill="#89a36e"/><circle cx="470" cy="350" r="120" fill="#7b945d"/></g><path d="M0 470Q170 410 310 475T600 450v250H0z" fill="#799365"/>
+  <circle cx="302" cy="157" r="58" fill="#d8a17f"/><path d="M244 151q12-91 64-87 54 5 56 102l-32-27-77 26z" fill="#252221"/><path d="M279 204h48v55h-48z" fill="#d49a78"/>
+  <path d="M232 248q68-44 141 2l119 226-87 38-28-47 25 193H189l31-194-31 50-88-39z" fill="url(#coat)"/><path d="M231 250q73-76 143 0l-19 47q-49-39-105 2z" fill="#d82d6c"/><path d="M302 262v382" stroke="#a51e4d" stroke-width="4" opacity=".55"/><circle cx="315" cy="320" r="4" fill="#fff"/><circle cx="315" cy="353" r="4" fill="#fff"/><path d="M211 461l-71 73M394 461l72 70" stroke="#f480ab" stroke-width="5" opacity=".45"/>
+</svg>

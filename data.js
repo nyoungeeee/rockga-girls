@@ -1,0 +1,101 @@
+/*
+ * 이 파일의 내용만 수정하면 화면의 콘텐츠가 바뀝니다.
+ * 이미지가 없을 때는 image 값을 빈 문자열("")로 두세요.
+ */
+export const ARCHIVE_DATA = {
+  site: {
+    lastUpdated: "2026.08.12",
+    submitUrl: "https://open.kakao.com/",
+  },
+
+  items: [
+    {
+      id: "rain-boots",
+      name: "헌터 오리지널 레인부츠",
+      category: "신발",
+      image: new URL("./assets/rain-boots.svg", import.meta.url).href,
+      shop: "W컨셉",
+      price: "150,000원대",
+      url: "https://www.wconcept.co.kr/",
+      review: "진흙밭에서도 끄떡없음! 하루 종일 신으면 조금 무거워요.",
+      points: ["방수 철벽", "튼튼함", "비추천: 무거움"],
+      date: "2026.08.12",
+    },
+    {
+      id: "raincoat",
+      name: "포켓 판초 레인코트",
+      category: "우비·방수",
+      image: new URL("./assets/raincoat.svg", import.meta.url).href,
+      shop: "무신사",
+      price: "39,000원",
+      url: "https://www.musinsa.com/",
+      review: "비가 많이 와도 안쪽은 보송했어요. 접으면 가방 한구석에 쏙 들어가요.",
+      points: ["가벼움", "휴대성 좋음", "넉넉한 핏"],
+      date: "2026.08.10",
+    },
+    {
+      id: "phone-pouch",
+      name: "터치 방수팩",
+      category: "우비·방수",
+      image: new URL("./assets/phone-pouch.svg", import.meta.url).href,
+      shop: "쿠팡",
+      price: "10,000원대",
+      url: "https://www.coupang.com/",
+      review: "물 튀어도 폰은 멀쩡! 팩 안에서도 터치가 잘 돼요.",
+      points: ["터치 잘됨", "가성비", "방수 굿"],
+      date: "2026.08.08",
+    },
+    {
+      id: "earplug",
+      name: "알파인 뮤직세이프 귀마개",
+      category: "귀마개",
+      image: new URL("./assets/earplug.svg", import.meta.url).href,
+      shop: "네이버",
+      price: "25,000원대",
+      url: "https://shopping.naver.com/",
+      review: "소리는 잘 들리는데 귀는 덜 아파요. 장시간 공연 볼 때 특히 추천!",
+      points: ["귀 보호", "착용감 좋음", "소리 선명"],
+      date: "2026.08.04",
+    },
+    {
+      id: "sunscreen",
+      name: "보송 선스틱 SPF50+",
+      category: "선케어",
+      image: new URL("./assets/sunstick.svg", import.meta.url).href,
+      shop: "올리브영",
+      price: "18,000원",
+      url: "https://www.oliveyoung.co.kr/",
+      review: "손에 묻지 않아 덧바르기 편하고 끈적임이 적어서 좋았어요.",
+      points: ["휴대 간편", "보송함", "백탁 적음"],
+      date: "2026.07.30",
+    },
+    {
+      id: "blanket",
+      name: "초경량 방수 피크닉 매트",
+      category: "기타",
+      image: "",
+      shop: "오늘의집",
+      price: "22,000원",
+      url: "https://ohou.se/",
+      review: "이미지는 없지만 강력 추천. 네 명이 앉기 충분하고 젖은 잔디에서도 안심이에요.",
+      points: ["4인용", "방수", "돌돌 말림"],
+      date: "2026.07.28",
+    },
+  ],
+
+  rooms: [
+    { name: "2026 펜타포트 숙소방", description: "숙소 추천 · 구하기 · 양도", url: "https://open.kakao.com/", note: "누구나 입장 가능", active: true },
+    { name: "펜타포트 카풀방", description: "서울·수도권 출발 카풀", url: "https://open.kakao.com/", note: "탑승·운전 모두 환영", active: true },
+    { name: "락페 혼자가는 사람들", description: "혼자 오는 사람들끼리 동행 구하기", url: "https://open.kakao.com/", note: "성별 무관", active: true },
+    { name: "장비 & 아이템 중고방", description: "페스티벌 관련 중고 거래", url: "https://open.kakao.com/", note: "거래 규칙 확인 필수", active: true },
+    { name: "락페 맛집 원정대", description: "공연장 근처 맛집과 뒤풀이 정보", url: "https://open.kakao.com/", note: "공연 종료 후 운영", active: false },
+  ],
+
+  transfers: [
+    { type: "티켓", event: "펜타포트 토요일 1일권", date: "8/2 (토)", quantity: "1매", price: "110,000원", status: "거래중", method: "현장 거래 / 송도", url: "https://open.kakao.com/", posted: "2026.08.12" },
+    { type: "티켓", event: "펜타포트 3일권", date: "8/1 (금) – 8/3 (일)", quantity: "1매", price: "230,000원", status: "예약중", method: "택배 거래", url: "https://open.kakao.com/", posted: "2026.08.11" },
+    { type: "숙소", event: "송도 숙소 양도 (2인)", date: "8/1 (금) – 8/3 (일)", quantity: "2인", price: "150,000원", status: "거래중", method: "송도 / 오션뷰", url: "https://open.kakao.com/", posted: "2026.08.10" },
+    { type: "티켓", event: "부산락페 토요일권", date: "9/26 (토)", quantity: "1매", price: "90,000원", status: "양도완료", method: "직거래", url: "#", posted: "2026.08.07" },
+    { type: "숙소", event: "부산역 근처 트윈룸", date: "9/25 (금) – 9/27 (일)", quantity: "2인", price: "180,000원", status: "거래중", method: "예약자명 변경", url: "https://open.kakao.com/", posted: "2026.08.05" },
+  ],
+};
