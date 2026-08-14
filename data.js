@@ -10,6 +10,19 @@ export const ARCHIVE_DATA = {
 
 items: [
   {
+    id: "kimjungmoon-aloe-cure-cooling-sunstick-23g",
+    name: "김정문알로에 큐어 쿨링 선스틱 23g",
+    category: "선케어",
+    image: "",
+    shop: "올리브영",
+    price: "",
+    url: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000162700&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_health_25_0101_1231&utm_term=&_CAD=google_pmax_health&gad_source=1&gad_campaignid=19855538117&gbraid=0AAAAADKpDR5lSbO5coXqWIlBfVudoVWHe&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k9IOgRwS3C-KW1wlHgw2L21OVuaMY4vOGDRg5iSsj_PGusm8LWR3hhoCo_kQAvD_BwE",
+    review:
+      "휴대하면서 덧바르기 쉬운 23g 선스틱 타입. 제품명에 쿨링 기능이 명시되어 있어 야외 페스티벌처럼 햇빛과 더위에 오래 노출되는 날 간편한 선케어용으로 활용하기 좋다.",
+    points: ["23g 선스틱", "쿨링 타입", "휴대·덧바르기 간편"],
+    date: "2026.08.14",
+  },
+  {
     id: "trillion-utility-belt-multi-cargo-bermuda-shorts-beige",
     name: "유틸리티 벨트 멀티 카고 버뮤다 쇼츠_베이지",
     category: "하의",
