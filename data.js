@@ -39,6 +39,30 @@ items: [
 
   restaurants: [
     {
+      id: "sindong-flower-crab-iksan",
+      festival: "",
+      venue: "익산",
+      name: "신동꽃게장",
+      category: "한식 · 게장",
+      image: "",
+      description: "익산 신동에 있는 게장 전문점. 꽃게장백반으로 간장게장과 양념게장, 알탕을 함께 판매한다.",
+      menus: ["꽃게장백반", "양념게장", "간장게장", "알탕"],
+      url: "https://naver.me/xVBhkqRK",
+      date: "2026.08.14",
+    },
+    {
+      id: "dongseone-octopus-main-iksan",
+      festival: "",
+      venue: "익산",
+      name: "동서네낙지 본점",
+      category: "한식 · 낙지요리",
+      image: "",
+      description: "익산 인북로46길에 있는 낙지요리 전문점. 낙지볶음과 낙지소곱창볶음을 중심으로 사리를 곁들여 먹는 메뉴를 판매한다.",
+      menus: ["낙지볶음", "낙지소곱창볶음", "대패사리(우삼겹)", "낙지사리", "우동사리"],
+      url: "https://naver.me/FoENe6uK",
+      date: "2026.08.14",
+    },
+    {
       id: "mermil-jinmijip-main-jeonju",
       festival: "",
       venue: "전주",
