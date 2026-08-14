@@ -24,6 +24,8 @@ items: [
   },
 ],
 
+  restaurants: [],
+
   rooms: [
     { name: "2026 펜타포트 숙소방", description: "숙소 추천 · 구하기 · 양도", url: "https://open.kakao.com/", note: "누구나 입장 가능", active: true },
     { name: "펜타포트 카풀방", description: "서울·수도권 출발 카풀", url: "https://open.kakao.com/", note: "탑승·운전 모두 환영", active: true },
