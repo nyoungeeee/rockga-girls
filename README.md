@@ -22,6 +22,31 @@ npm run preview
 
 모든 콘텐츠는 [`data.js`](./data.js)에 모여 있습니다. HTML이나 CSS를 수정하지 않고 이 파일의 값만 바꾸면 됩니다. 이미지 경로에는 Vite가 배포 파일까지 함께 복사할 수 있도록 기존 예시처럼 `new URL("경로", import.meta.url).href` 형식을 사용합니다.
 
+### 모바일에서 ChatGPT/Codex로 수정하기
+
+루트의 [`AGENTS.md`](./AGENTS.md)에 콘텐츠 관리 규칙이 정의되어 있습니다. 이 저장소에 접근 가능한 ChatGPT/Codex에서는 정확한 필드명을 몰라도 자연어로 요청할 수 있습니다.
+
+예:
+
+```text
+아이템에 이거 추가해줘.
+https://example.com/product
+다이소에서 산 방수팩인데 생각보다 튼튼했고 비 올 때 쓰기 좋았어.
+```
+
+```text
+파생방 하나 추가해줘.
+방 이름: 전주 얼티밋 같이 가는 방
+링크: https://open.kakao.com/...
+설명: 공연 같이 볼 사람 구하는 방
+```
+
+```text
+펜타포트 토요일권 양도글 양도완료로 바꿔줘.
+```
+
+단순 콘텐츠 요청에서는 `data.js`만 수정하고, 필요한 경우에만 `assets/` 이미지를 추가합니다. UI 코드와 스타일은 별도 요청이 없으면 건드리지 않습니다.
+
 ### 기본 정보
 
 `site.lastUpdated`에는 화면에 노출할 최종 업데이트 날짜를, `site.submitUrl`에는 정보 제보 링크를 입력합니다.
@@ -108,6 +133,7 @@ Vercel에서 이 저장소를 Import하면 Vite 설정을 자동으로 인식합
 ├── styles.css       # PC·모바일 반응형 스타일
 ├── app.js           # 데이터 렌더링, 검색, 필터, 메뉴
 ├── data.js          # 수정 가능한 콘텐츠 데이터
+├── AGENTS.md        # ChatGPT/Codex 콘텐츠 관리 규칙
 ├── assets/          # 아이템 이미지
 ├── vercel.json      # Vercel 헤더 설정
 └── package.json     # 개발·빌드 명령
