@@ -26,6 +26,18 @@ items: [
 
   restaurants: [
     {
+      id: "cheonghakdong-perilla-jeonju",
+      festival: "",
+      venue: "전주",
+      name: "청학동들깨요리",
+      category: "한식 · 들깨요리",
+      image: "https://d12zq4w4guyljn.cloudfront.net/300_300_20251117010857_photo1_R0cOVCZJNhBq.webp",
+      description: "전주 중화산동의 들깨요리 전문점. 고소한 들깨 육수를 활용한 삼계탕과 갈비탕, 옹심이 메뉴가 중심이라 든든한 식사나 보양식으로 들르기 좋은 곳.",
+      menus: ["들깨삼계탕", "들깨옹심이", "들깨소갈비전골", "들깨갈비탕", "들깨갈비옹심이"],
+      url: "https://naver.me/FHOwpmwh",
+      date: "2026.08.14",
+    },
+    {
       id: "dajung-hoega-main-jeonju",
       festival: "",
       venue: "전주",
