@@ -8,20 +8,21 @@ export const ARCHIVE_DATA = {
     submitUrl: "https://open.kakao.com/",
   },
 
-  items: [
-    {
-      id: "utility-belt-multi-cargo-shorts",
-      name: "트릴리온 유틸리티 벨트 멀티 카고 쇼츠",
-      category: "하의",
-      image: "",
-      shop: "무신사",
-      price: "36,010원",
-      url: "https://musinsa.onelink.me/PvkC/h03j86vg",
-      review: "벨트 디테일과 여러 개의 카고 포켓이 포인트인 버뮤다 쇼츠. 수납이 필요한 락페에서 활용하기 좋고, 티셔츠나 민소매와 편하게 매치하기 좋은 스타일.",
-      points: ["멀티 카고 포켓", "벨트 디테일", "버뮤다 핏"],
-      date: "2026.08.14",
-    },
-  ],
+items: [
+  {
+    id: "trillion-utility-belt-multi-cargo-bermuda-shorts-beige",
+    name: "유틸리티 벨트 멀티 카고 버뮤다 쇼츠_베이지",
+    category: "하의",
+    image: "https://thetrillion.co.kr/web/product/big/202507/56609a828a211d7e428a592dd93aed8e.jpg",
+    shop: "트릴리온",
+    price: "37,900원",
+    url: "https://musinsa.onelink.me/PvkC/h03j86vg",
+    review:
+      "트릴리온 특유의 스트릿 무드가 느껴지는 버뮤다 쇼츠. 벨트 디테일과 멀티 카고 포켓이 포인트라 락페처럼 소지품을 자주 챙겨야 하는 날 활용도가 높다.",
+    points: ["멀티 카고 포켓", "벨트 디테일", "버뮤다 핏"],
+    date: "2026.08.14",
+  },
+],
 
   rooms: [
     { name: "2026 펜타포트 숙소방", description: "숙소 추천 · 구하기 · 양도", url: "https://open.kakao.com/", note: "누구나 입장 가능", active: true },
