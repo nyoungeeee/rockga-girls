@@ -185,7 +185,7 @@ footer { border-top: 1px solid var(--line-dark); background: #f7f4ee; }
   body.menu-open { overflow: hidden; }
 
   .hero { width: calc(100% - 36px); min-height: auto; padding: 67px 0 55px; }
-  .hero::before { top: 20px; right: -60px; width: 220px; height: 220px; }
+  .hero::before { top: 20px; right: -18px; width: 220px; height: 220px; }
   .eyebrow { margin-bottom: 13px; font-size: 9px; }
   .hero h1 { max-width: 340px; font-size: clamp(40px, 11.5vw, 50px); line-height: 1.13; }
   .hero-copy { margin: 22px 0 15px; font-size: 14px; line-height: 1.8; }
