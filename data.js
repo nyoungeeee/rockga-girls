@@ -39,6 +39,18 @@ items: [
 
   restaurants: [
     {
+      id: "pnb-pungnyeon-bakery-main-jeonju",
+      festival: "",
+      venue: "전주",
+      name: "PNB 풍년제과 본점",
+      category: "베이커리 · 초코파이",
+      image: "https://pnb1951.cafe24.com/web/pnb2020/store/PNB_bonjum_1.png",
+      description: "전주 완산구 팔달로에 있는 PNB 풍년제과 본점. 수제 초코파이와 붓세, 센베류를 판매하는 베이커리다.",
+      menus: ["PNB 오리지널초코파이", "PNB 화이트초코파이", "콘붓세", "땅콩센베", "깨센베"],
+      url: "https://naver.me/xf5AihEc",
+      date: "2026.08.14",
+    },
+    {
       id: "cheonghakdong-perilla-jeonju",
       festival: "",
       venue: "전주",
