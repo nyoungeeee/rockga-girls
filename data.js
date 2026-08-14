@@ -24,7 +24,20 @@ items: [
   },
 ],
 
-  restaurants: [],
+  restaurants: [
+    {
+      id: "namno-galbi-main-jeonju",
+      festival: "",
+      venue: "전주",
+      name: "남노갈비 본점",
+      category: "한식 · 물갈비",
+      image: "https://d12zq4w4guyljn.cloudfront.net/750_750_20260105115426_photo2_KvOfSuNnt6JM.webp",
+      description: "전주 한옥마을 인근에서 남노물갈비를 대표 메뉴로 내는 갈비전골 전문점.",
+      menus: ["남노물갈비", "떡갈비", "당면사리", "라면사리", "비빔채"],
+      url: "https://naver.me/GII0e2hF",
+      date: "2026.08.14",
+    },
+  ],
 
   rooms: [
     { name: "2026 펜타포트 숙소방", description: "숙소 추천 · 구하기 · 양도", url: "https://open.kakao.com/", note: "누구나 입장 가능", active: true },
