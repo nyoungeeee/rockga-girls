@@ -20,6 +20,7 @@
         </a>
         <nav class="desktop-nav" aria-label="주요 메뉴">
           <a href="#items">락페 아이템</a>
+          <a href="#restaurants">행사장 맛집</a>
           <a href="#rooms">파생방 정보</a>
           <a href="#transfers">티켓·숙소 양도</a>
           <a class="nav-accent" href="#submit">정보 제보</a>
@@ -30,6 +31,7 @@
       </div>
       <nav class="mobile-menu" id="mobile-menu" aria-label="모바일 메뉴" hidden>
         <a href="#items">락페 아이템</a>
+        <a href="#restaurants">행사장 맛집</a>
         <a href="#rooms">파생방 정보</a>
         <a href="#transfers">티켓·숙소 양도</a>
         <a href="#submit">정보 제보</a>
@@ -49,12 +51,13 @@
         <form class="search-box" id="search-form" role="search">
           <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.8"></circle><path d="m16 16 4 4"></path></svg>
           <label class="sr-only" for="site-search">아카이브 검색</label>
-          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 방 이름, 행사명을 검색해보세요" />
+          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 맛집, 방 이름, 행사명을 검색해보세요" />
           <kbd>⌘ K</kbd>
         </form>
 
         <div class="quick-links" aria-label="바로가기">
           <a href="#items"><span>🛍️</span><b>락페 아이템</b><small>후기와 쇼핑 링크</small></a>
+          <a href="#restaurants"><span>🍜</span><b>행사장 맛집</b><small>공연장 근처 먹거리</small></a>
           <a href="#rooms"><span>💬</span><b>파생방 정보</b><small>오픈카톡 모음</small></a>
           <a href="#transfers"><span>🎟️</span><b>티켓·숙소 양도</b><small>최신 양도 정보</small></a>
         </div>
@@ -73,6 +76,20 @@
           <div class="filter-row" id="item-filters" aria-label="아이템 카테고리 필터"></div>
           <div class="item-grid" id="item-grid"></div>
           <button class="more-button" id="items-more" type="button"><span>＋</span> 더 많은 아이템 보기</button>
+        </section>
+
+        <section class="archive-section" id="restaurants" aria-labelledby="restaurants-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">FESTIVAL FOOD GUIDE</p>
+              <h2 id="restaurants-title"><span class="title-icon">🍜</span> 행사장 맛집</h2>
+              <p>공연 전후에 들르기 좋은 행사장 주변 맛집을 모았어요.</p>
+            </div>
+            <span class="count" id="restaurants-count"></span>
+          </div>
+          <div class="filter-row" id="restaurant-filters" aria-label="행사장 맛집 필터"></div>
+          <div class="item-grid" id="restaurant-grid"></div>
+          <button class="more-button" id="restaurants-more" type="button"><span>＋</span> 더 많은 맛집 보기</button>
         </section>
 
         <section class="archive-section" id="rooms" aria-labelledby="rooms-title">
@@ -119,7 +136,7 @@
           <div class="submit-copy">
             <p class="section-kicker">CONTRIBUTE</p>
             <h2 id="submit-title">좋은 정보, 혼자만 알기 아깝다면?</h2>
-            <p>추천하고 싶은 아이템, 생생한 사용 후기, 파생방 또는 티켓·숙소 양도 정보를 운영진에게 알려주세요.</p>
+            <p>추천하고 싶은 아이템, 행사장 맛집, 생생한 사용 후기, 파생방 또는 티켓·숙소 양도 정보를 운영진에게 알려주세요.</p>
             <ul>
               <li>링크와 함께 간단한 설명을 보내주세요.</li>
               <li>연락처 등 민감한 개인정보는 공개하지 않아요.</li>
@@ -143,7 +160,7 @@
           <a class="wordmark footer-logo" href="#top"><span class="wordmark-mark">ϟ</span><span>락페가는 여자들 Archive</span></a>
           <p>비영리 커뮤니티 공유용 아카이브입니다.<br />거래는 반드시 본인 책임 아래 안전하게 진행해주세요.</p>
         </div>
-        <div class="footer-links"><a href="#items">아이템</a><a href="#rooms">파생방</a><a href="#transfers">양도</a><a href="#submit">제보</a></div>
+        <div class="footer-links"><a href="#items">아이템</a><a href="#restaurants">맛집</a><a href="#rooms">파생방</a><a href="#transfers">양도</a><a href="#submit">제보</a></div>
         <p class="copyright">© <span id="year"></span> 락페가는 여자들</p>
       </div>
     </footer>
