@@ -129,5 +129,23 @@ items: [
     { name: "캠핑 혼자가는 여자들", description: "락가여 파생 캠핑방", url: "https://open.kakao.com/o/gMYasvIi", note: "입장 시 닉네임 / 지역 / 선호캠핑종류 입력", active: true },
   ],
 
+  shares: [
+    {
+      type: "택시",
+      title: "11:38 전주역 → 전주대 택시팟",
+      date: "2026.08.15",
+      time: "11:38 전주역 도착 후",
+      from: "전주역",
+      to: "전주대학교",
+      cost: "택시 약 10,000원",
+      duration: "약 20분",
+      status: "모집중",
+      host: "붕어빵",
+      note: "서울에서 전주 방면 KTX 중 11:38 전주역 도착 열차 이용자 대상. 셔틀은 약 40~50분 소요되어 택시 동승자를 모집합니다.",
+      url: "https://open.kakao.com/o/s8ZLmFZc",
+      posted: "2026.08.14",
+    },
+  ],
+
   transfers: [],
 };
