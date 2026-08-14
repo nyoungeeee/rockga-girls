@@ -22,6 +22,7 @@
           <a href="#items">락페 아이템</a>
           <a href="#restaurants">행사장 맛집</a>
           <a href="#rooms">파생방 정보</a>
+          <a href="#shares">택시·공유팟</a>
           <a href="#transfers">티켓·숙소 양도</a>
           <a class="nav-accent" href="#submit">정보 제보</a>
         </nav>
@@ -33,6 +34,7 @@
         <a href="#items">락페 아이템</a>
         <a href="#restaurants">행사장 맛집</a>
         <a href="#rooms">파생방 정보</a>
+        <a href="#shares">택시·공유팟</a>
         <a href="#transfers">티켓·숙소 양도</a>
         <a href="#submit">정보 제보</a>
       </nav>
@@ -51,14 +53,14 @@
         <form class="search-box" id="search-form" role="search">
           <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.8"></circle><path d="m16 16 4 4"></path></svg>
           <label class="sr-only" for="site-search">아카이브 검색</label>
-          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 맛집, 방 이름, 행사명을 검색해보세요" />
+          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 맛집, 공유팟, 방 이름, 행사명을 검색해보세요" />
           <kbd>⌘ K</kbd>
         </form>
 
         <div class="quick-links" aria-label="바로가기">
           <a href="#items"><span>🛍️</span><b>락페 아이템</b><small>후기와 쇼핑 링크</small></a>
           <a href="#rooms"><span>💬</span><b>파생방 정보</b><small>오픈카톡 모음</small></a>
-          <a href="#transfers"><span>🎟️</span><b>티켓·숙소 양도</b><small>최신 양도 정보</small></a>
+          <a href="#shares"><span>🚕</span><b>택시·공유팟</b><small>같이 이동하기</small></a>
         </div>
       </section>
 
@@ -110,6 +112,26 @@
           <button class="more-button" id="rooms-more" type="button"><span>＋</span> 더 많은 파생방 보기</button>
         </section>
 
+        <section class="archive-section" id="shares" aria-labelledby="shares-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">RIDE & SHARE</p>
+              <h2 id="shares-title"><span class="title-icon">🚕</span> 택시 / 공유팟</h2>
+              <p>행사장까지 같이 이동하거나 비용을 나눌 사람을 찾는 글이에요.</p>
+            </div>
+            <span class="count" id="shares-count"></span>
+          </div>
+          <div class="filter-row" id="share-filters" aria-label="공유팟 종류 필터"></div>
+          <div class="table-wrap desktop-table">
+            <table class="transfer-table">
+              <thead><tr><th>모집</th><th>종류</th><th>날짜·시간</th><th>이동</th><th>예상 비용</th><th>상태</th><th></th></tr></thead>
+              <tbody id="shares-table"></tbody>
+            </table>
+          </div>
+          <div class="mobile-card-list transfer-cards" id="shares-cards"></div>
+          <button class="more-button" id="shares-more" type="button"><span>＋</span> 더 많은 공유팟 보기</button>
+        </section>
+
         <section class="archive-section" id="transfers" aria-labelledby="transfers-title">
           <div class="section-heading">
             <div>
@@ -135,7 +157,7 @@
           <div class="submit-copy">
             <p class="section-kicker">CONTRIBUTE</p>
             <h2 id="submit-title">좋은 정보, 혼자만 알기 아깝다면?</h2>
-            <p>추천하고 싶은 아이템, 행사장 맛집, 생생한 사용 후기, 파생방 또는 티켓·숙소 양도 정보를 운영진에게 알려주세요.</p>
+            <p>추천하고 싶은 아이템, 행사장 맛집, 파생방, 택시·공유팟 또는 티켓·숙소 양도 정보를 운영진에게 알려주세요.</p>
             <ul>
               <li>링크와 함께 간단한 설명을 보내주세요.</li>
               <li>연락처 등 민감한 개인정보는 공개하지 않아요.</li>
@@ -157,9 +179,9 @@
       <div class="footer-inner">
         <div>
           <a class="wordmark footer-logo" href="#top"><span class="wordmark-mark">ϟ</span><span>락페가는 여자들 Archive</span></a>
-          <p>비영리 커뮤니티 공유용 아카이브입니다.<br />거래는 반드시 본인 책임 아래 안전하게 진행해주세요.</p>
+          <p>비영리 커뮤니티 공유용 아카이브입니다.<br />거래와 동행은 반드시 본인 책임 아래 안전하게 진행해주세요.</p>
         </div>
-        <div class="footer-links"><a href="#items">아이템</a><a href="#restaurants">맛집</a><a href="#rooms">파생방</a><a href="#transfers">양도</a><a href="#submit">제보</a></div>
+        <div class="footer-links"><a href="#items">아이템</a><a href="#restaurants">맛집</a><a href="#rooms">파생방</a><a href="#shares">공유팟</a><a href="#transfers">양도</a><a href="#submit">제보</a></div>
         <p class="copyright">© <span id="year"></span> 락페가는 여자들</p>
       </div>
     </footer>
