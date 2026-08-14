@@ -65,11 +65,6 @@ items: [
 
   rooms: [
     { name: "캠핑 혼자가는 여자들", description: "락가여 파생 캠핑방", url: "https://open.kakao.com/o/gMYasvIi", note: "입장 시 닉네임 / 지역 / 선호캠핑종류 입력", active: true },
-    { name: "2026 펜타포트 숙소방", description: "숙소 추천 · 구하기 · 양도", url: "https://open.kakao.com/", note: "누구나 입장 가능", active: true },
-    { name: "펜타포트 카풀방", description: "서울·수도권 출발 카풀", url: "https://open.kakao.com/", note: "탑승·운전 모두 환영", active: true },
-    { name: "락페 혼자가는 사람들", description: "혼자 오는 사람들끼리 동행 구하기", url: "https://open.kakao.com/", note: "성별 무관", active: true },
-    { name: "장비 & 아이템 중고방", description: "페스티벌 관련 중고 거래", url: "https://open.kakao.com/", note: "거래 규칙 확인 필수", active: true },
-    { name: "락페 맛집 원정대", description: "공연장 근처 맛집과 뒤풀이 정보", url: "https://open.kakao.com/", note: "공연 종료 후 운영", active: false },
   ],
 
   transfers: [
