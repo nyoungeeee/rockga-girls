@@ -8,8 +8,9 @@ import { ARCHIVE_DATA } from "./data.js";
     query: "",
     itemFilter: "전체",
     restaurantFilter: "전체",
+    shareFilter: "전체",
     transferFilter: "전체",
-    expanded: { items: false, restaurants: false, rooms: false, transfers: false },
+    expanded: { items: false, restaurants: false, rooms: false, shares: false, transfers: false },
   };
 
   const $ = (selector) => document.querySelector(selector);
@@ -120,6 +121,38 @@ import { ARCHIVE_DATA } from "./data.js";
     $("#rooms").classList.toggle("is-empty", all.length === 0);
   }
 
+  const shareStatusClass = (status) => status === "모집중" ? "trading" : "done";
+
+  function shareRow(item) {
+    const disabled = item.status === "마감";
+    return `<tr class="${disabled ? "is-done" : ""}"><td><strong>${item.title}</strong></td><td><span class="type-label">${item.type}</span></td><td>${item.date}<br />${item.time}</td><td>${item.from} → ${item.to}</td><td>${item.cost}</td><td><span class="status-label ${shareStatusClass(item.status)}">${item.status}</span></td><td><a class="table-link" ${linkAttrs(item.url)}>${disabled ? "모집 마감" : "오픈카톡 참여 ↗"}</a></td></tr>`;
+  }
+
+  function shareCard(item) {
+    const disabled = item.status === "마감";
+    return `<article class="info-card transfer-card ${disabled ? "is-done" : ""}">
+      <div class="card-heading"><span class="type-label">${item.type}</span><span class="status-label ${shareStatusClass(item.status)}">${item.status}</span></div>
+      <h3>${item.title}</h3>
+      <dl><div><dt>일시</dt><dd>${item.date} · ${item.time}</dd></div><div><dt>이동</dt><dd>${item.from} → ${item.to}</dd></div><div><dt>예상</dt><dd>${item.cost}${item.duration ? ` · ${item.duration}` : ""}</dd></div><div><dt>모집</dt><dd>${item.host || ""}</dd></div></dl>
+      ${item.note ? `<div class="card-note">${item.note}</div>` : ""}
+      <div class="posted">게시일 ${item.posted}</div>
+      <a class="outline-link" ${linkAttrs(item.url)}>${disabled ? "모집 마감" : "오픈카톡 참여"} <span>${disabled ? "" : "↗"}</span></a>
+    </article>`;
+  }
+
+  function renderShares() {
+    const shares = data.shares || [];
+    const all = shares.filter((item) => (state.shareFilter === "전체" || item.type === state.shareFilter) && includesQuery([item.type, item.title, item.date, item.time, item.from, item.to, item.cost, item.duration, item.status, item.host, item.note]));
+    const visible = state.expanded.shares ? all : all.slice(0, displayLimit());
+    $("#shares-table").innerHTML = visible.map(shareRow).join("");
+    $("#shares-cards").innerHTML = visible.map(shareCard).join("");
+    $("#shares-count").textContent = `${all.length} POSTS`;
+    const more = $("#shares-more");
+    more.hidden = all.length <= displayLimit();
+    more.innerHTML = state.expanded.shares ? "<span>−</span> 접어 보기" : "<span>＋</span> 더 많은 공유팟 보기";
+    $("#shares").classList.toggle("is-empty", all.length === 0);
+  }
+
   const statusClass = (status) => status === "거래중" ? "trading" : status === "예약중" ? "reserved" : "done";
 
   function transferRow(item) {
@@ -151,8 +184,8 @@ import { ARCHIVE_DATA } from "./data.js";
   }
 
   function renderAll() {
-    renderItems(); renderRestaurants(); renderRooms(); renderTransfers();
-    const everythingEmpty = ["#items", "#restaurants", "#rooms", "#transfers"].every((id) => $(id).classList.contains("is-empty"));
+    renderItems(); renderRestaurants(); renderRooms(); renderShares(); renderTransfers();
+    const everythingEmpty = ["#items", "#restaurants", "#rooms", "#shares", "#transfers"].every((id) => $(id).classList.contains("is-empty"));
     $("#no-results").hidden = !everythingEmpty;
     $(".document").classList.toggle("has-no-results", everythingEmpty);
   }
@@ -167,18 +200,22 @@ import { ARCHIVE_DATA } from "./data.js";
 
   const itemCategories = ["전체", ...new Set(data.items.map((item) => item.category))];
   const restaurantVenues = ["전체", ...new Set((data.restaurants || []).map((item) => item.venue).filter(Boolean))];
+  const shareTypes = ["전체", ...new Set((data.shares || []).map((item) => item.type).filter(Boolean))];
   function bindItemFilters() {
     renderFilters("#item-filters", itemCategories, state.itemFilter, (filter) => { state.itemFilter = filter; state.expanded.items = false; bindItemFilters(); renderItems(); });
   }
   function bindRestaurantFilters() {
     renderFilters("#restaurant-filters", restaurantVenues, state.restaurantFilter, (filter) => { state.restaurantFilter = filter; state.expanded.restaurants = false; bindRestaurantFilters(); renderRestaurants(); });
   }
+  function bindShareFilters() {
+    renderFilters("#share-filters", shareTypes, state.shareFilter, (filter) => { state.shareFilter = filter; state.expanded.shares = false; bindShareFilters(); renderShares(); });
+  }
   function bindTransferFilters() {
     renderFilters("#transfer-filters", ["전체", "티켓", "숙소"], state.transferFilter, (filter) => { state.transferFilter = filter; state.expanded.transfers = false; bindTransferFilters(); renderTransfers(); });
   }
-  bindItemFilters(); bindRestaurantFilters(); bindTransferFilters(); renderAll();
+  bindItemFilters(); bindRestaurantFilters(); bindShareFilters(); bindTransferFilters(); renderAll();
 
-  [["items", "#items-more"], ["restaurants", "#restaurants-more"], ["rooms", "#rooms-more"], ["transfers", "#transfers-more"]].forEach(([key, selector]) => {
+  [["items", "#items-more"], ["restaurants", "#restaurants-more"], ["rooms", "#rooms-more"], ["shares", "#shares-more"], ["transfers", "#transfers-more"]].forEach(([key, selector]) => {
     $(selector).addEventListener("click", () => { state.expanded[key] = !state.expanded[key]; renderAll(); });
   });
 
