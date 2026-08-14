@@ -67,11 +67,5 @@ items: [
     { name: "캠핑 혼자가는 여자들", description: "락가여 파생 캠핑방", url: "https://open.kakao.com/o/gMYasvIi", note: "입장 시 닉네임 / 지역 / 선호캠핑종류 입력", active: true },
   ],
 
-  transfers: [
-    { type: "티켓", event: "펜타포트 토요일 1일권", date: "8/2 (토)", quantity: "1매", price: "110,000원", status: "거래중", method: "현장 거래 / 송도", url: "https://open.kakao.com/", posted: "2026.08.12" },
-    { type: "티켓", event: "펜타포트 3일권", date: "8/1 (금) – 8/3 (일)", quantity: "1매", price: "230,000원", status: "예약중", method: "택배 거래", url: "https://open.kakao.com/", posted: "2026.08.11" },
-    { type: "숙소", event: "송도 숙소 양도 (2인)", date: "8/1 (금) – 8/3 (일)", quantity: "2인", price: "150,000원", status: "거래중", method: "송도 / 오션뷰", url: "https://open.kakao.com/", posted: "2026.08.10" },
-    { type: "티켓", event: "부산락페 토요일권", date: "9/26 (토)", quantity: "1매", price: "90,000원", status: "양도완료", method: "직거래", url: "#", posted: "2026.08.07" },
-    { type: "숙소", event: "부산역 근처 트윈룸", date: "9/25 (금) – 9/27 (일)", quantity: "2인", price: "180,000원", status: "거래중", method: "예약자명 변경", url: "https://open.kakao.com/", posted: "2026.08.05" },
-  ],
+  transfers: [],
 };
