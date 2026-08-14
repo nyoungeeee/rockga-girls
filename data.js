@@ -39,6 +39,18 @@ items: [
 
   restaurants: [
     {
+      id: "mermil-jinmijip-main-jeonju",
+      festival: "",
+      venue: "전주",
+      name: "메르밀진미집 본점",
+      category: "한식 · 메밀소바",
+      image: "",
+      description: "전주 완산구 전주천동로에 있는 메밀소바 전문점. 3대에 걸쳐 운영해 온 본점으로 소바와 메밀 콩국수, 돈까스 메뉴를 판매한다.",
+      menus: ["메밀소바", "땡초소바", "메밀 콩국수", "등심돈까스", "치즈돈까스"],
+      url: "https://naver.me/xk1nSZci",
+      date: "2026.08.14",
+    },
+    {
       id: "pnb-pungnyeon-bakery-main-jeonju",
       festival: "",
       venue: "전주",
