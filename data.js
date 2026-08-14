@@ -5,7 +5,7 @@
 export const ARCHIVE_DATA = {
   site: {
     lastUpdated: "2026.08.14",
-    submitUrl: "https://open.kakao.com/",
+    submitUrl: "https://open.kakao.com/o/gceOSMIi",
   },
 
 items: [
