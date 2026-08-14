@@ -7,8 +7,9 @@ import { ARCHIVE_DATA } from "./data.js";
   const state = {
     query: "",
     itemFilter: "전체",
+    restaurantFilter: "전체",
     transferFilter: "전체",
-    expanded: { items: false, rooms: false, transfers: false },
+    expanded: { items: false, restaurants: false, rooms: false, transfers: false },
   };
 
   const $ = (selector) => document.querySelector(selector);
@@ -60,6 +61,38 @@ import { ARCHIVE_DATA } from "./data.js";
     more.hidden = all.length <= displayLimit();
     more.innerHTML = state.expanded.items ? "<span>−</span> 접어 보기" : "<span>＋</span> 더 많은 아이템 보기";
     $("#items").classList.toggle("is-empty", all.length === 0);
+  }
+
+  function restaurantCard(item) {
+    const image = item.image
+      ? `<img src="${item.image}" alt="${item.name}" data-name="${item.name}" loading="lazy" />`
+      : placeholder(item.name);
+    return `
+      <article class="item-card">
+        <div class="item-image">${image}<span class="category-tag">${item.venue}</span></div>
+        <div class="item-body">
+          <div class="item-topline"><span>${item.festival || "행사장 맛집"}</span><span>${item.category || "맛집"}</span></div>
+          <h3>${item.name}</h3>
+          ${item.description ? `<div class="review"><span>소개</span><p>${item.description}</p></div>` : ""}
+          <div class="points">${item.menus.map((menu) => `<span>${menu}</span>`).join("")}</div>
+          <a class="text-link" ${linkAttrs(item.url)}>네이버지도에서 보기 <span>↗</span></a>
+        </div>
+      </article>`;
+  }
+
+  function renderRestaurants() {
+    const restaurants = data.restaurants || [];
+    const all = restaurants.filter((item) => (state.restaurantFilter === "전체" || item.venue === state.restaurantFilter) && includesQuery([item.name, item.venue, item.festival, item.category, item.description, ...item.menus]));
+    const visible = state.expanded.restaurants ? all : all.slice(0, displayLimit());
+    $("#restaurant-grid").innerHTML = visible.map(restaurantCard).join("");
+    $("#restaurant-grid").querySelectorAll("img").forEach((image) => image.addEventListener("error", () => {
+      image.outerHTML = placeholder(image.dataset.name);
+    }, { once: true }));
+    $("#restaurants-count").textContent = `${all.length} PLACES`;
+    const more = $("#restaurants-more");
+    more.hidden = all.length <= displayLimit();
+    more.innerHTML = state.expanded.restaurants ? "<span>−</span> 접어 보기" : "<span>＋</span> 더 많은 맛집 보기";
+    $("#restaurants").classList.toggle("is-empty", all.length === 0);
   }
 
   function roomRow(room) {
@@ -118,8 +151,8 @@ import { ARCHIVE_DATA } from "./data.js";
   }
 
   function renderAll() {
-    renderItems(); renderRooms(); renderTransfers();
-    const everythingEmpty = ["#items", "#rooms", "#transfers"].every((id) => $(id).classList.contains("is-empty"));
+    renderItems(); renderRestaurants(); renderRooms(); renderTransfers();
+    const everythingEmpty = ["#items", "#restaurants", "#rooms", "#transfers"].every((id) => $(id).classList.contains("is-empty"));
     $("#no-results").hidden = !everythingEmpty;
     $(".document").classList.toggle("has-no-results", everythingEmpty);
   }
@@ -133,15 +166,19 @@ import { ARCHIVE_DATA } from "./data.js";
   }
 
   const itemCategories = ["전체", ...new Set(data.items.map((item) => item.category))];
+  const restaurantVenues = ["전체", ...new Set((data.restaurants || []).map((item) => item.venue).filter(Boolean))];
   function bindItemFilters() {
     renderFilters("#item-filters", itemCategories, state.itemFilter, (filter) => { state.itemFilter = filter; state.expanded.items = false; bindItemFilters(); renderItems(); });
+  }
+  function bindRestaurantFilters() {
+    renderFilters("#restaurant-filters", restaurantVenues, state.restaurantFilter, (filter) => { state.restaurantFilter = filter; state.expanded.restaurants = false; bindRestaurantFilters(); renderRestaurants(); });
   }
   function bindTransferFilters() {
     renderFilters("#transfer-filters", ["전체", "티켓", "숙소"], state.transferFilter, (filter) => { state.transferFilter = filter; state.expanded.transfers = false; bindTransferFilters(); renderTransfers(); });
   }
-  bindItemFilters(); bindTransferFilters(); renderAll();
+  bindItemFilters(); bindRestaurantFilters(); bindTransferFilters(); renderAll();
 
-  [["items", "#items-more"], ["rooms", "#rooms-more"], ["transfers", "#transfers-more"]].forEach(([key, selector]) => {
+  [["items", "#items-more"], ["restaurants", "#restaurants-more"], ["rooms", "#rooms-more"], ["transfers", "#transfers-more"]].forEach(([key, selector]) => {
     $(selector).addEventListener("click", () => { state.expanded[key] = !state.expanded[key]; renderAll(); });
   });
 
