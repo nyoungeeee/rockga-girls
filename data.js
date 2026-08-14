@@ -64,6 +64,7 @@ items: [
   ],
 
   rooms: [
+    { name: "운동하는 여자들 🏃🏃‍♀️🏃‍♂️", description: "작은 일에도 부둥부둥 해드립니다", url: "https://open.kakao.com/o/g8OMTZvh", note: "복복복🫳🫳🫳", active: true },
     { name: "캠핑 혼자가는 여자들", description: "락가여 파생 캠핑방", url: "https://open.kakao.com/o/gMYasvIi", note: "입장 시 닉네임 / 지역 / 선호캠핑종류 입력", active: true },
   ],
 
