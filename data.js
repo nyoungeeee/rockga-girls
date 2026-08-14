@@ -26,6 +26,18 @@ items: [
 
   restaurants: [
     {
+      id: "dajung-hoega-main-jeonju",
+      festival: "",
+      venue: "전주",
+      name: "다정회가 본점",
+      category: "일식 · 연어",
+      image: "https://d12zq4w4guyljn.cloudfront.net/750_750_20240810024214_photo2_f519baca3ed3.webp",
+      description: "전주 중화산동에 있는 연어 전문점. 연어회와 연어초밥을 중심으로 사케동, 연어스테이크 등 다양한 연어 메뉴를 즐길 수 있어 공연 전후 식사 장소로 보기 좋은 곳.",
+      menus: ["연어회", "연어초밥", "사케동", "연어스테이크", "연어샐러드"],
+      url: "https://naver.me/5Ifa79Xx",
+      date: "2026.08.14",
+    },
+    {
       id: "namno-galbi-main-jeonju",
       festival: "",
       venue: "전주",
