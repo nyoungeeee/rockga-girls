@@ -4,7 +4,7 @@
  */
 export const ARCHIVE_DATA = {
   site: {
-    lastUpdated: "2026.08.17",
+    lastUpdated: "2026.09.02",
     submitUrl: "https://open.kakao.com/o/gceOSMIi",
   },
 
@@ -131,6 +131,21 @@ items: [
   ],
 
   shares: [
+    {
+      type: "택시",
+      title: "그풀캠 광주송정역 → 짱뚱어해수욕장 카풀",
+      date: "2026.09.04",
+      time: "오후 3시 이후",
+      from: "광주송정역",
+      to: "짱뚱어해수욕장",
+      cost: "1인당 약 25,000원",
+      duration: "",
+      status: "모집중",
+      host: "",
+      note: "카카오벤티 이용. 3인 모집(현재 2인 확정 / 총 5인). 귀가는 협의 후 결정.",
+      url: "https://open.kakao.com/o/s6nQoALi",
+      posted: "2026.09.02",
+    },
     {
       type: "택시",
       title: "11:38 전주역 → 전주대 택시팟",
