@@ -166,8 +166,8 @@ items: [
   transfers: [
     {
       type: "티켓",
-      event: "그린풀캠프 3일권",
-      date: "",
+      event: "부산락페스티벌 3일권",
+      date: "2026.10.02~10.04",
       quantity: "1매",
       price: "정가",
       status: "거래중",
