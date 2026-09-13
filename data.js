@@ -4,7 +4,7 @@
  */
 export const ARCHIVE_DATA = {
   site: {
-    lastUpdated: "2026.09.02",
+    lastUpdated: "2026.09.13",
     submitUrl: "https://open.kakao.com/o/gceOSMIi",
   },
 
@@ -163,5 +163,17 @@ items: [
     },
   ],
 
-  transfers: [],
+  transfers: [
+    {
+      type: "티켓",
+      event: "그린풀캠프 3일권",
+      date: "",
+      quantity: "1매",
+      price: "정가",
+      status: "거래중",
+      method: "작성자 태그 또는 오픈프로필 문의 · 양수 시 대선 칵테일 제공",
+      url: "",
+      posted: "2026.09.13",
+    },
+  ],
 };
