@@ -4,7 +4,7 @@
  */
 export const ARCHIVE_DATA = {
   site: {
-    lastUpdated: "2026.09.13",
+    lastUpdated: "2026.09.28",
     submitUrl: "https://open.kakao.com/o/gceOSMIi",
   },
 
@@ -38,6 +38,18 @@ items: [
 ],
 
   restaurants: [
+    {
+      id: "halmae-jaecheopguk-sasang-busan",
+      festival: "",
+      venue: "부산 사상구",
+      name: "할매재첩국",
+      category: "한식 · 재첩국",
+      image: "",
+      description: "부산 사상구 삼락동 재첩골목의 재첩국 전문점. 재첩국과 재첩회, 재첩찜을 판매하며 재첩국 주문 시 밥과 고등어조림 등 반찬이 함께 제공된다.",
+      menus: ["재첩국", "재첩회", "재첩찜"],
+      url: "https://map.naver.com/p/entry/place/11600631?lng=128.9862105&lat=35.1932712&placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609281114%26locale%3Dko%26svcName%3Dmap_pcv5&entry=plt&searchType=place&c=15.00,0,0,0,dh",
+      date: "2026.09.28",
+    },
     {
       id: "sindong-flower-crab-iksan",
       festival: "",
