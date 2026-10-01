@@ -4,7 +4,7 @@
  */
 export const ARCHIVE_DATA = {
   site: {
-    lastUpdated: "2026.09.28",
+    lastUpdated: "2026.10.01",
     submitUrl: "https://open.kakao.com/o/gceOSMIi",
   },
 
@@ -324,6 +324,21 @@ items: [
   ],
 
   shares: [
+    {
+      type: "택시",
+      title: "부산락페 헤드 공연 후 → 부산중앙역 방향 택시팟",
+      date: "2026.10.02~10.04",
+      time: "금·토·일 헤드 공연 종료 후",
+      from: "부산락페",
+      to: "부산중앙역 방향",
+      cost: "",
+      duration: "",
+      status: "모집중",
+      host: "",
+      note: "헤드 공연 종료 후 모여 부산중앙역 방향으로 함께 이동합니다. 제보자: 쿠키.",
+      url: "https://open.kakao.com/o/gLHWweAi",
+      posted: "2026.10.01",
+    },
     {
       type: "택시",
       title: "그풀캠 광주송정역 → 짱뚱어해수욕장 카풀",
