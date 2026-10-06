@@ -154,8 +154,13 @@ import { ARCHIVE_DATA } from "./data.js";
   }
 
   function toolCard(tool) {
+    const isDownload = Boolean(tool.file);
+    const href = tool.file || tool.url;
+    const actionAttrs = isDownload
+      ? `href="${href}" download="${tool.filename}"`
+      : `href="${href}" target="_blank" rel="noopener noreferrer"`;
     return `<article class="tool-card">
-      <div class="tool-icon" aria-hidden="true">A</div>
+      <div class="tool-icon" aria-hidden="true">${tool.icon || tool.name.slice(0, 1)}</div>
       <div class="tool-copy">
         <div class="tool-meta"><span>제작: ${tool.author}</span><span>${tool.date}</span></div>
         <h3>${tool.name}</h3>
@@ -163,7 +168,7 @@ import { ARCHIVE_DATA } from "./data.js";
         <div class="tool-features">${tool.features.map((feature) => `<span>${feature}</span>`).join("")}</div>
         <div class="tool-note">${tool.note}</div>
       </div>
-      <a class="primary-button tool-download" href="${tool.file}" download="${tool.filename}">HTML 다운로드 <span>↓</span></a>
+      <a class="primary-button tool-download" ${actionAttrs}>${isDownload ? "HTML 다운로드" : "서비스 열기"} <span>${isDownload ? "↓" : "↗"}</span></a>
     </article>`;
   }
 
