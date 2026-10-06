@@ -153,6 +153,28 @@ import { ARCHIVE_DATA } from "./data.js";
     $("#shares").classList.toggle("is-empty", all.length === 0);
   }
 
+  function toolCard(tool) {
+    return `<article class="tool-card">
+      <div class="tool-icon" aria-hidden="true">A</div>
+      <div class="tool-copy">
+        <div class="tool-meta"><span>제작: ${tool.author}</span><span>${tool.date}</span></div>
+        <h3>${tool.name}</h3>
+        <p>${tool.description}</p>
+        <div class="tool-features">${tool.features.map((feature) => `<span>${feature}</span>`).join("")}</div>
+        <div class="tool-note">${tool.note}</div>
+      </div>
+      <a class="primary-button tool-download" href="${tool.file}" download="${tool.filename}">HTML 다운로드 <span>↓</span></a>
+    </article>`;
+  }
+
+  function renderTools() {
+    const tools = data.tools || [];
+    const all = tools.filter((tool) => includesQuery([tool.name, tool.author, tool.description, tool.note, ...tool.features]));
+    $("#tool-grid").innerHTML = all.map(toolCard).join("");
+    $("#tools-count").textContent = `${all.length} TOOLS`;
+    $("#tools").classList.toggle("is-empty", all.length === 0);
+  }
+
   const statusClass = (status) => status === "거래중" ? "trading" : status === "예약중" ? "reserved" : "done";
 
   function transferRow(item) {
@@ -184,8 +206,8 @@ import { ARCHIVE_DATA } from "./data.js";
   }
 
   function renderAll() {
-    renderItems(); renderRestaurants(); renderRooms(); renderShares(); renderTransfers();
-    const everythingEmpty = ["#items", "#restaurants", "#rooms", "#shares", "#transfers"].every((id) => $(id).classList.contains("is-empty"));
+    renderItems(); renderRestaurants(); renderRooms(); renderShares(); renderTransfers(); renderTools();
+    const everythingEmpty = ["#items", "#restaurants", "#rooms", "#shares", "#transfers", "#tools"].every((id) => $(id).classList.contains("is-empty"));
     $("#no-results").hidden = !everythingEmpty;
     $(".document").classList.toggle("has-no-results", everythingEmpty);
   }

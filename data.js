@@ -4,7 +4,7 @@
  */
 export const ARCHIVE_DATA = {
   site: {
-    lastUpdated: "2026.10.01",
+    lastUpdated: "2026.10.06",
     submitUrl: "https://open.kakao.com/o/gceOSMIi",
   },
 
@@ -321,6 +321,19 @@ items: [
     { name: "26 JUMF 공유방", description: "", url: "https://open.kakao.com/o/g5DgYeJi", note: "", active: true },
     { name: "운동하는 여자들 🏃🏃‍♀️🏃‍♂️", description: "작은 일에도 부둥부둥 해드립니다", url: "https://open.kakao.com/o/g8OMTZvh", note: "복복복🫳🫳🫳", active: true },
     { name: "캠핑 혼자가는 여자들", description: "락가여 파생 캠핑방", url: "https://open.kakao.com/o/gMYasvIi", note: "입장 시 닉네임 / 지역 / 선호캠핑종류 입력", active: true },
+  ],
+
+  tools: [
+    {
+      name: "Align",
+      author: "쭈럼프",
+      description: "집중 타이머, 할 일, 타임테이블, 통계, 일기를 한곳에서 관리하는 개인 기록 도구예요.",
+      features: ["집중·휴식 타이머", "할 일·일정 관리", "타임테이블·통계", "일기·백업"],
+      note: "기록은 브라우저에 저장되며, PC Chrome·Edge에서는 폴더 저장과 JSON 백업을 지원해요.",
+      file: "./downloads/align-by-navy.html",
+      filename: "Align_by_navy.html",
+      date: "2026.10.06",
+    },
   ],
 
   shares: [

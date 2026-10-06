@@ -24,6 +24,7 @@
           <a href="#rooms">파생방 정보</a>
           <a href="#shares">택시·공유팟</a>
           <a href="#transfers">티켓·숙소 양도</a>
+          <a href="#tools">멤버 제작 도구</a>
           <a class="nav-accent" href="#submit">정보 제보</a>
         </nav>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기">
@@ -36,6 +37,7 @@
         <a href="#rooms">파생방 정보</a>
         <a href="#shares">택시·공유팟</a>
         <a href="#transfers">티켓·숙소 양도</a>
+        <a href="#tools">멤버 제작 도구</a>
         <a href="#submit">정보 제보</a>
       </nav>
     </header>
@@ -53,7 +55,7 @@
         <form class="search-box" id="search-form" role="search">
           <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.8"></circle><path d="m16 16 4 4"></path></svg>
           <label class="sr-only" for="site-search">아카이브 검색</label>
-          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 맛집, 공유팟, 방 이름, 행사명을 검색해보세요" />
+          <input id="site-search" type="search" autocomplete="off" placeholder="아이템, 맛집, 공유팟, 방 이름, 행사명, 도구를 검색해보세요" />
           <kbd>⌘ K</kbd>
         </form>
 
@@ -152,6 +154,18 @@
           <button class="more-button" id="transfers-more" type="button"><span>＋</span> 완료된 글 포함 더 보기</button>
         </section>
 
+        <section class="archive-section" id="tools" aria-labelledby="tools-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">MADE BY MEMBERS</p>
+              <h2 id="tools-title"><span class="title-icon">🧰</span> 멤버 제작 도구</h2>
+              <p>락가여 멤버들이 직접 만든 유용한 도구를 소개해요.</p>
+            </div>
+            <span class="count" id="tools-count"></span>
+          </div>
+          <div class="tool-grid" id="tool-grid"></div>
+        </section>
+
         <section class="submit-section" id="submit" aria-labelledby="submit-title">
           <div class="submit-pin" aria-hidden="true">↗</div>
           <div class="submit-copy">
@@ -181,7 +195,7 @@
           <a class="wordmark footer-logo" href="#top"><span class="wordmark-mark">ϟ</span><span>락페가는 여자들 Archive</span></a>
           <p>비영리 커뮤니티 공유용 아카이브입니다.<br />거래와 동행은 반드시 본인 책임 아래 안전하게 진행해주세요.</p>
         </div>
-        <div class="footer-links"><a href="#items">아이템</a><a href="#restaurants">맛집</a><a href="#rooms">파생방</a><a href="#shares">공유팟</a><a href="#transfers">양도</a><a href="#submit">제보</a></div>
+        <div class="footer-links"><a href="#items">아이템</a><a href="#restaurants">맛집</a><a href="#rooms">파생방</a><a href="#shares">공유팟</a><a href="#transfers">양도</a><a href="#tools">멤버 도구</a><a href="#submit">제보</a></div>
         <p class="copyright">© <span id="year"></span> 락페가는 여자들</p>
       </div>
     </footer>

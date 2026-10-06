@@ -130,6 +130,19 @@ tr.is-done .table-link { color: #aaa; pointer-events: none; text-decoration: non
 .archive-section.is-empty > :not(.section-heading):not(.filter-row) { display: none; }
 .archive-section.is-empty .section-heading { opacity: .4; }
 
+
+.tool-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tool-card { padding: 28px 30px; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 24px; border: 1px solid var(--line); background: var(--white); box-shadow: 0 1px 0 rgba(0,0,0,.02); }
+.tool-icon { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 18px; background: linear-gradient(145deg, #1b378f, #2b5be0 58%, #4f8bf7); color: white; font-family: var(--serif); font-size: 31px; font-weight: 700; box-shadow: 0 10px 22px rgba(43,91,224,.2); }
+.tool-copy { min-width: 0; }
+.tool-meta { margin-bottom: 5px; display: flex; gap: 12px; color: var(--faint); font-family: var(--mono); font-size: 9px; letter-spacing: .04em; }
+.tool-copy h3 { margin: 0; font-size: 22px; letter-spacing: -.03em; }
+.tool-copy > p { margin: 6px 0 12px; color: var(--muted); font-size: 13px; }
+.tool-features { display: flex; flex-wrap: wrap; gap: 6px; }
+.tool-features span { padding: 5px 9px; border-radius: 100px; background: #f1f4fc; color: #2a3f8f; font-size: 10px; font-weight: 600; }
+.tool-note { margin-top: 11px; color: var(--faint); font-size: 10px; }
+.tool-download { min-width: 150px; gap: 18px; }
+
 .submit-section { margin: 92px 0; padding: 50px 54px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; border: 1px solid rgba(239,63,132,.35); background: linear-gradient(120deg, #fff8fa 0%, #fff2f6 48%, #fffaf7 100%); }
 .submit-pin { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 50%; background: var(--pink); color: white; font-size: 25px; }
 .submit-copy .section-kicker { margin-bottom: 8px; }
@@ -273,4 +286,11 @@ footer { border-top: 1px solid var(--line-dark); background: #f7f4ee; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+@media (max-width: 760px) {
+  .tool-card { padding: 21px 18px 18px; display: block; }
+  .tool-icon { width: 54px; height: 54px; margin-bottom: 15px; border-radius: 14px; font-size: 24px; }
+  .tool-copy h3 { font-size: 20px; }
+  .tool-copy > p { font-size: 12px; }
+  .tool-download { width: 100%; min-width: 0; margin-top: 18px; }
 }
