@@ -160,7 +160,7 @@ import { ARCHIVE_DATA } from "./data.js";
       ? `href="${href}" download="${tool.filename}"`
       : `href="${href}" target="_blank" rel="noopener noreferrer"`;
     return `<article class="tool-card">
-      <div class="tool-icon" aria-hidden="true">${tool.icon || tool.name.slice(0, 1)}</div>
+      <div class="tool-icon" aria-hidden="true">${tool.image ? `<img src="${tool.image}" alt="" />` : (tool.icon || tool.name.slice(0, 1))}</div>
       <div class="tool-copy">
         <div class="tool-meta"><span>제작: ${tool.author}</span><span>${tool.date}</span></div>
         <h3>${tool.name}</h3>

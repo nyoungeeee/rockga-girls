@@ -331,7 +331,7 @@ items: [
       features: ["메뉴별 팟 찾기", "시간별 모집 확인", "나눠먹기 팟 등록", "오픈카톡 연결"],
       note: "2026 부산락페 종료와 함께 운영을 마친 프로젝트예요. 서비스 화면과 종료 안내는 링크에서 확인할 수 있어요.",
       url: "https://hanip.b201.kr/",
-      icon: "한",
+      image: new URL("./assets/hanip-pot-icon-128.png", import.meta.url).href,
       date: "2026.10.06",
     },
     {
